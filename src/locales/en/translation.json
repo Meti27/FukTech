@@ -1,0 +1,89 @@
+{
+      "nav": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "slides": [
+    { "title": "Reliable machinery for your worksite", "text": "From grass cutters to landscaping tools — curated and ready." },
+    { "title": "Built to last, easy to maintain", "text": "We focus on dependable suppliers and clear information." },
+    { "title": "Quick quotes via WhatsApp or phone", "text": "Reach us fast — we respond quickly with what you need." }
+  ],
+  "intro": {
+    "welcome": "Welcome to {{brand}}",
+    "desc": "Find reliable **machinery** — from grass cutters and trimmers to landscaping equipment and more. Browse our products and contact us for quick quotes.",
+    "browse": "Browse Products",
+    "contact": "Contact Us"
+  },
+  "cta": {
+    "title": "Need a quick quote?",
+    "text": "Message us on WhatsApp or call — we’ll get back fast.",
+    "whatsapp": "WhatsApp",
+    "call": "Call {{phone}}"
+  },
+   "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We’re here to help you with machinery, quotes, and support."
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "phoneOptional": "Phone (optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us what you need...",
+      "submit": "Send Message",
+      "todoAlert": "TODO: wire up EmailJS or backend 📩"
+    },
+    "quick": {
+      "title": "Need a quick quote?",
+      "subtitle": "Reach us directly via WhatsApp or phone call.",
+      "whatsapp": "WhatsApp",
+      "call": "Call {{phone}}"
+    },
+    "map": {
+      "title": "Google Map"
+    },
+    "social": {
+      "title": "Connect with us"
+    }
+  },
+  "testimonials": {
+    "title": "What customers say",
+    "items": [
+      { "quote": "Fast and professional. Got the mower we needed in 2 days!", "name": "Marija A." },
+      { "quote": "Clear info and great support on WhatsApp.", "name": "Dragan K." },
+      { "quote": "Good selection and fair prices.", "name": "Igor P." }
+    ]
+  },
+    "features": {
+    "items": [
+      {
+        "name": "Quality Machinery",
+        "desc": "Reliable and durable tools built to last, carefully curated for your landscaping and construction needs."
+      },
+      {
+        "name": "Fast Responses",
+        "desc": "Quick quotes and clear answers via WhatsApp or phone so you can decide faster."
+      },
+      {
+        "name": "Local Support",
+        "desc": "A team you can reach easily for questions and after-sales help. We’re close and ready to assist."
+      }
+    ]
+  },
+   "featured": {
+    "loading": "Loading featured products…",
+    "title": "Featured products",
+    "viewAll": "View all"
+  }, 
+   "products": {
+    "title": "Products",
+    "loading": "Loading products…",
+    "error": "Failed to load products",
+    "empty": "No products available right now. Please check back soon."
+  }
+}

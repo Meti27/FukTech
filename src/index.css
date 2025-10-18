@@ -1,0 +1,11 @@
+@keyframes slideUp { from { opacity:0; transform: translateY(24px) } to { opacity:1; transform: translateY(0) } }
+@keyframes fadeIn  { from { opacity:0 } to { opacity:1 } }
+
+.reveal { opacity:0; transform: translateY(24px); }
+.reveal.is-visible { animation: slideUp .7s ease-out both; }
+.reveal-delay-1.is-visible { animation-delay: .08s; }
+.reveal-delay-2.is-visible { animation-delay: .16s; }
+.reveal-delay-3.is-visible { animation-delay: .24s; }
+
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";

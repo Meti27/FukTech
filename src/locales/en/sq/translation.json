@@ -1,0 +1,89 @@
+{
+      "nav": {
+    "home": "Ballina",
+    "products": "Produktet",
+    "contact": "Kontakti",
+    "language": "Gjuha"
+  },
+  "slides": [
+    { "title": "Mjete të besueshme për punishten tuaj", "text": "Nga kositëset te mjetet e peizazhit — gati për përdorim." },
+    { "title": "Të qëndrueshme dhe të lehta për mirëmbajtje", "text": "Punojmë me furnitorë të besueshëm dhe informata të qarta." },
+    { "title": "Oferta të shpejta në WhatsApp ose telefon", "text": "Na kontaktoni — përgjigjemi shpejt me çfarë ju duhet." }
+  ],
+  "intro": {
+    "welcome": "Mirësevini në {{brand}}",
+    "desc": "Gjeni **makineri** të besueshme — nga kositëset dhe trimerët te pajisjet e peizazhit. Shfletoni produktet dhe kërkoni oferta të shpejta.",
+    "browse": "Shfleto Produktet",
+    "contact": "Na Kontakto"
+  },
+  "cta": {
+    "title": "Keni nevojë për ofertë të shpejtë?",
+    "text": "Na shkruani në WhatsApp ose telefononi — përgjigjemi shpejt.",
+    "whatsapp": "WhatsApp",
+    "call": "Telefono {{phone}}"
+  },
+  "contact": {
+    "hero": {
+      "title": "Na Kontaktoni",
+      "subtitle": "Jemi këtu për t’ju ndihmuar me makineri, oferta dhe suport."
+    },
+    "form": {
+      "title": "Na dërgoni një mesazh",
+      "name": "Emri",
+      "namePlaceholder": "Emri juaj",
+      "email": "Email",
+      "phoneOptional": "Telefoni (opsional)",
+      "message": "Mesazhi",
+      "messagePlaceholder": "Na tregoni çfarë ju duhet...",
+      "submit": "Dërgo Mesazhin",
+      "todoAlert": "TODO: lidhe EmailJS ose backend-in 📩"
+    },
+    "quick": {
+      "title": "Keni nevojë për ofertë të shpejtë?",
+      "subtitle": "Na kontaktoni direkt në WhatsApp ose telefon.",
+      "whatsapp": "WhatsApp",
+      "call": "Telefono {{phone}}"
+    },
+    "map": {
+      "title": "Harta Google"
+    },
+    "social": {
+      "title": "Lidhu me ne"
+    }
+  },
+   "testimonials": {
+    "title": "Çfarë thonë klientët",
+    "items": [
+      { "quote": "Të shpejtë dhe profesionalë. Kositësen që na duhej e morëm për 2 ditë!", "name": "Marija A." },
+      { "quote": "Informata të qarta dhe suport i shkëlqyer në WhatsApp.", "name": "Dragan K." },
+      { "quote": "Zgjedhje e mirë dhe çmime të drejta.", "name": "Igor P." }
+    ]
+  },
+   "features": {
+    "items": [
+      {
+        "name": "Makineri Cilësore",
+        "desc": "Mjete të besueshme dhe të qëndrueshme, të përzgjedhura me kujdes për peizazh dhe ndërtim."
+      },
+      {
+        "name": "Përgjigje të Shpejta",
+        "desc": "Oferta të shpejta dhe informata të qarta në WhatsApp ose telefon që të vendosni më shpejt."
+      },
+      {
+        "name": "Suport Lokal",
+        "desc": "Ekip me të cilin lidheni lehtë për pyetje dhe ndihmë pas shitjes. Jemi afër dhe gati për t’ju ndihmuar."
+      }
+    ]
+  },
+  "featured": {
+    "loading": "Po ngarkohen produktet e veçuara…",
+    "title": "Produktet e veçuara",
+    "viewAll": "Shiko të gjitha"
+  },
+   "products": {
+    "title": "Produktet",
+    "loading": "Po ngarkohen produktet…",
+    "error": "Nuk u arrit të ngarkohen produktet",
+    "empty": "Aktualisht nuk ka produkte. Kthehuni së shpejti."
+  }
+}
