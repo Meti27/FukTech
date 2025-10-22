@@ -34,10 +34,21 @@ export default function Navbar() {
   return (
     <>
       <header className="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between gap-3">
-          {/* Left: Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt={SITE.brandName} className="h-8 sm:h-10 md:h-12 w-auto" />
+        {/* On mobile: 3-column grid to center the logo; on md+: flex as before */}
+        <div className="mx-auto max-w-6xl px-4 h-16 md:h-20 lg:h-24 grid grid-cols-[1fr_auto_1fr] items-center gap-3 md:flex md:items-center md:justify-between">
+          {/* Left (empty spacer on mobile so logo can be centered) */}
+          <div className="md:hidden" aria-hidden="true" />
+
+          {/* Logo — centered on mobile, larger on big screens */}
+          <Link
+            to="/"
+            className="flex items-center gap-2 justify-self-center md:justify-self-start"
+          >
+            <img
+              src={logo}
+              alt={SITE.brandName}
+              className="h-12 sm:h-14 md:h-30 lg:h-50 w-auto"
+            />
             <span className="sr-only">{SITE.brandName}</span>
           </Link>
 
@@ -59,16 +70,16 @@ export default function Navbar() {
             </select>
           </nav>
 
-          {/* Mobile: hamburger */}
+          {/* Mobile: hamburger (right cell on mobile, hidden on desktop) */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            className="justify-self-end md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-200"
             aria-controls="mobile-drawer"
             aria-expanded={open}
             aria-label="Open menu"
             onClick={() => setOpen(true)}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </button>
@@ -97,7 +108,7 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between h-16 px-4 border-b">
             <div className="flex items-center gap-2">
-              <img src={logo} alt="" className="h-8 w-auto" />
+              <img src={logo} alt="" className="h-10 w-auto" />
             </div>
             <button
               type="button"

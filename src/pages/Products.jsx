@@ -12,29 +12,47 @@ function formatPriceEUR(value, lang) {
   }
 }
 
+/**
+ * Localize a field that can be either:
+ * - string  -> return as-is (legacy data)
+ * - object  -> { en?: string, mk?: string, sq?: string }
+ * Falls back to English, then first available value.
+ */
+function localize(field, lang, fallback = "en") {
+  if (!field) return "";
+  if (typeof field === "string") return field;
+  if (typeof field === "object") {
+    return field[lang] || field[fallback] || field.en || Object.values(field).find(Boolean) || "";
+  }
+  return "";
+}
+
 function ProductCard({ p, lang }) {
+  const name = localize(p.name, lang);
+  const description = localize(p.description, lang);
+
   return (
     <div className="bg-white border rounded-lg overflow-hidden">
       <div className="aspect-[4/3] bg-gray-50">
         {p.image && (
           <img
             src={urlFor(p.image)}
-            alt={p.name}
+            alt={name || "Product"}
             className="w-full h-full object-cover"
             loading="lazy"
           />
         )}
       </div>
       <div className="p-4">
-        <h3 className="font-semibold text-lg break-words">{p.name}</h3>
+        <h3 className="font-semibold text-lg break-words">{name}</h3>
         {p.price != null && (
           <p className="mt-1 text-blue-700 font-medium">
             {formatPriceEUR(p.price, lang)}
           </p>
         )}
-        {p.description && (
+        {description && (
           <p className="mt-2 text-gray-700 text-sm line-clamp-2 break-words">
-            {p.description}
+            {description}
           </p>
         )}
       </div>
@@ -94,7 +112,7 @@ export default function Products() {
         <p>{t("products.empty")}</p>
       </section>
     );
-    }
+  }
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-8">
