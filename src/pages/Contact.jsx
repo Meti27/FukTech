@@ -129,7 +129,7 @@ export default function Contact() {
       <section className="w-full h-[280px] sm:h-[360px] md:h-[420px] overflow-hidden">
         <iframe
           title={t("contact.map.title")}
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.4623918372293!2d20.97173421544974!3d42.00686997921202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135414567f8b07b3%3A0xc54b8cb635b4eaf6!2sTetovo!5e0!3m2!1sen!2smk!4v1632929246245!5m2!1sen!2smk"
+          src="https://maps.app.goo.gl/y2Um5AoCuxRz7dMJA"
           width="100%"
           height="100%"
           className="block max-w-full"
