@@ -129,7 +129,7 @@ export default function Contact() {
       <section className="w-full h-[280px] sm:h-[360px] md:h-[420px] overflow-hidden">
         <iframe
           title={t("contact.map.title")}
-          src="https://maps.app.goo.gl/y2Um5AoCuxRz7dMJA"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5948.365120752463!2d20.92178704847719!3d41.802827510373945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351573c14e473d7%3A0x67c48c023196bd7a!2sElite%20Restaurant!5e0!3m2!1sen!2smk!4v1761758205604!5m2!1sen!2smk"
           width="100%"
           height="100%"
           className="block max-w-full"
