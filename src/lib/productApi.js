@@ -9,7 +9,8 @@ const PRODUCTS_QUERY = `
   name,                    // string OR {en,mk,sq}
   description,             // string OR {en,mk,sq}
   price,
-  image,                   // raw image for urlFor()
+  images,   
+  image,                // raw image for urlFor()
   "imageUrl": image.asset->url
 }
 `;

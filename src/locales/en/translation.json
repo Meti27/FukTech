@@ -12,7 +12,7 @@
   ],
   "intro": {
     "welcome": "Welcome to {{brand}}",
-    "desc": "Find reliable **machinery** — from grass cutters and trimmers to landscaping equipment and more. Browse our products and contact us for quick quotes.",
+    "desc": "Find reliable machinery — from grass cutters and trimmers to landscaping equipment and more. Browse our products and contact us for quick quotes.",
     "browse": "Browse Products",
     "contact": "Contact Us"
   },
@@ -84,6 +84,7 @@
     "title": "Products",
     "loading": "Loading products…",
     "error": "Failed to load products",
-    "empty": "No products available right now. Please check back soon."
+    "empty": "No products available right now. Please check back soon.",
+    "viewDetails": "View details"
   }
 }

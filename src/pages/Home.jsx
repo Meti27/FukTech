@@ -8,9 +8,8 @@ import Testimonials from "../components/Testimonials.jsx";
 import { useMemo } from "react";
 import { useTranslation, Trans } from "react-i18next";
 
-import image1 from "../assets/images/image1.jpg";
-import image2 from "../assets/images/image2.jpg";
-import image3 from "../assets/images/image3.jpg";
+import background1 from "../assets/images/background1.png";
+import background2 from "../assets/images/background2.png";
 
 export default function Home() {
   useReveal();
@@ -18,9 +17,8 @@ export default function Home() {
 
   const slides = useMemo(
     () => [
-      { src: image1, title: t("slides.0.title"), text: t("slides.0.text") },
-      { src: image2, title: t("slides.1.title"), text: t("slides.1.text") },
-      { src: image3, title: t("slides.2.title"), text: t("slides.2.text") }
+      { src: background1, title: t("slides.0.title"), text: t("slides.0.text") },
+      { src: background2, title: t("slides.1.title"), text: t("slides.1.text") },
     ],
     [i18n.language, t]
   );

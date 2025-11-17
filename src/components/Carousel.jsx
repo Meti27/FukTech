@@ -8,6 +8,13 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
 
   const count = Array.isArray(slides) ? slides.length : 0;
 
+  // HERO HEIGHT / ASPECT
+  // Full hero uses a cinematic 21:9 ratio (matches your FUXTEC banners)
+  // Non-full can be a bit taller.
+  const heightClass = full
+    ? "aspect-[21/9]"                      // same on all screens → same framing
+    : "aspect-[4/3] sm:aspect-[16/9]";     // used when full={false}
+
   // Clamp index if slides change
   useEffect(() => {
     if (count === 0) setIndex(0);
@@ -27,11 +34,12 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
     if (count <= 1) return;
     timer.current = setTimeout(() => setIndex((i) => (i + 1) % count), interval);
   }
+
   function stop() {
     if (timer.current) clearTimeout(timer.current);
   }
 
-  // Pause when tab hidden (saves battery, avoids weird jumps)
+  // Pause when tab hidden
   useEffect(() => {
     const onVis = () => (document.hidden ? stop() : start());
     document.addEventListener("visibilitychange", onVis);
@@ -39,7 +47,7 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count, interval]);
 
-  // Touch swipe (doesn't block vertical scroll)
+  // Touch swipe
   function onTouchStart(e) {
     touchStartX.current = e.touches[0].clientX;
     touchDeltaX.current = 0;
@@ -64,35 +72,26 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
     setIndex((i) => (i + 1) % count);
   }
 
-  // Responsive height:
-  // - Phones: ~60% svh, min 280px (safe thumb-reach)
-  // - md+: viewport minus navbar (64px), with max 820px
-  const heightClass = full
-    ? "h-[60svh] min-h-[280px] md:h-[calc(100vh-64px)] md:min-h-[420px] md:max-h-[820px]"
-    : "h-[320px] sm:h-[360px] md:h-[460px]";
-
   if (count === 0) {
-    // Graceful empty state (keeps layout from collapsing)
     return (
-      <div className={`relative w-full overflow-hidden ${full ? "" : "rounded-2xl border"} ${heightClass}`}>
-        <div className="grid place-items-center w-full h-full text-gray-500 text-sm">No slides</div>
+      <div className={`relative w-full overflow-hidden ${heightClass}`}>
+        <div className="grid place-items-center w-full h-full text-gray-500 text-sm">
+          No slides
+        </div>
       </div>
     );
   }
 
   return (
     <div
-      className={`relative w-full overflow-hidden ${full ? "" : "rounded-2xl border"}`}
+      className="relative w-full overflow-hidden"
       onMouseEnter={stop}
       onMouseLeave={start}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
-      // Allow vertical scroll while enabling horizontal pan for swipe
-      className2="touch-pan-y" // (kept for clarity; Tailwind: add `touch-pan-y` below)
       aria-roledescription="carousel"
       aria-label="Image carousel"
-      // Keyboard navigation
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === "ArrowLeft") prev();
@@ -100,7 +99,7 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
       }}
     >
       <div
-        className={`flex transition-transform duration-700 ease-out ${heightClass} touch-pan-y`}
+        className={`flex transition-transform duration-700 ease-out ${heightClass}`}
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {slides.map((s, i) => (
@@ -113,7 +112,11 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
                 loading={i === 0 ? "eager" : "lazy"}
                 draggable={false}
               />
+
+              {/* gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+
+              {/* text overlay */}
               {(s.title || s.text) && (
                 <div className="absolute bottom-6 left-6 right-6 md:left-12 md:max-w-xl text-white drop-shadow">
                   {s.title && (
@@ -122,7 +125,9 @@ export default function Carousel({ slides = [], interval = 5000, full = false })
                     </h3>
                   )}
                   {s.text && (
-                    <p className="mt-2 text-sm sm:text-base md:text-lg opacity-95">{s.text}</p>
+                    <p className="mt-2 text-sm sm:text-base md:text-lg opacity-95">
+                      {s.text}
+                    </p>
                   )}
                 </div>
               )}

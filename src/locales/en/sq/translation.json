@@ -12,7 +12,7 @@
   ],
   "intro": {
     "welcome": "Mirësevini në {{brand}}",
-    "desc": "Gjeni **makineri** të besueshme — nga kositëset dhe trimerët te pajisjet e peizazhit. Shfletoni produktet dhe kërkoni oferta të shpejta.",
+    "desc": "Gjeni makineri të besueshme — nga kositëset dhe trimerët te pajisjet e peizazhit. Shfletoni produktet dhe kërkoni oferta të shpejta.",
     "browse": "Shfleto Produktet",
     "contact": "Na Kontakto"
   },
@@ -84,6 +84,7 @@
     "title": "Produktet",
     "loading": "Po ngarkohen produktet…",
     "error": "Nuk u arrit të ngarkohen produktet",
-    "empty": "Aktualisht nuk ka produkte. Kthehuni së shpejti."
+    "empty": "Aktualisht nuk ka produkte. Kthehuni së shpejti.",
+    "viewDetails": "Shiko më shumë"
   }
 }
